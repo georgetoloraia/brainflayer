@@ -5,8 +5,6 @@
 
 // Function to generate a random 66-bit binary number
 void generateRandom66BitNumber(uint64_t *high, uint64_t *low) {
-    // Seed the random number generator
-    srand((unsigned) time(NULL));
 
     // Generate a random 64-bit number for the lower part
     *low = ((uint64_t) rand() << 32) | rand();
@@ -17,22 +15,27 @@ void generateRandom66BitNumber(uint64_t *high, uint64_t *low) {
 
 int main() {
     uint64_t high, low;
+    
+    // Seed the random number generator
+    srand((unsigned) time(NULL));
 
-    // Generate the random 66-bit number
-    generateRandom66BitNumber(&high, &low);
+    while (1) {
+        // Generate the random 66-bit number
+        generateRandom66BitNumber(&high, &low);
 
-    // Print the high part (2 bits)
-    for (int i = 1; i >= 0; i--) {
-        // printf("%llu", (high >> i) & 1);
+        // Print the high part (2 bits)
+        for (int i = 1; i >= 0; i--) {
+            // printf("%llu", (high >> i) & 1);
+        }
+
+        // Print the low part (64 bits)
+        for (int i = 63; i >= 0; i--) {
+            // printf("%llu", (low >> i) & 1);
+        }
+
+        // Print the result as hexadecimal with leading zeros
+        printf("%048llx%016llx\n", high, low);
     }
-
-    // Print the low part (64 bits)
-    for (int i = 63; i >= 0; i--) {
-        // printf("%llu", (low >> i) & 1);
-    }
-
-    // Print the result as hexadecimal with leading zeros
-    printf("%048llx%016llx\n", high, low);
 
     return 0;
 }
