@@ -63,6 +63,10 @@ or
 
 `your_generator | brainflayer -v -b example.blf`
 
+or
+
+`rand66bit | brainflayer -v -b example.blf`
+
 ### Advanced
 
 Brainflayer's design is heavily influenced by [Unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy).
