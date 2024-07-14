@@ -67,6 +67,14 @@ or
 
 `rand66bit | brainflayer -v -b example.blf -t priv -x -o found.txt`
 
+
+```py
+if startswith: 2 
+use command: rand2 | brainflayer -v -b example.blf -t priv -x -o found.txt
+else if startswith: 3
+use command: rand3 | brainflayer -v -b example.blf -t priv -x -o found.txt
+```
+
 ### Advanced
 
 Brainflayer's design is heavily influenced by [Unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy).
