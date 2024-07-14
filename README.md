@@ -71,7 +71,7 @@ or
 ```c
 if startswith: 2 
 rand2 | brainflayer -v -b example.blf -t priv -x -o found.txt
-if startswith: 3
+else if startswith: 3
 rand3 | brainflayer -v -b example.blf -t priv -x -o found.txt
 ```
 
