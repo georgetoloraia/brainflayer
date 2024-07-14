@@ -68,11 +68,11 @@ or
 `rand66bit | brainflayer -v -b example.blf -t priv -x -o found.txt`
 
 
-```py
+```less
 if startswith: 2 
-use command: rand2 | brainflayer -v -b example.blf -t priv -x -o found.txt
-else if startswith: 3
-use command: rand3 | brainflayer -v -b example.blf -t priv -x -o found.txt
+rand2 | brainflayer -v -b example.blf -t priv -x -o found.txt
+if startswith: 3
+rand3 | brainflayer -v -b example.blf -t priv -x -o found.txt
 ```
 
 ### Advanced
