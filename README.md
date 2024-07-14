@@ -65,7 +65,7 @@ or
 
 or
 
-`rand66bit | brainflayer -v -b example.blf`
+`rand66bit | brainflayer -v -b example.blf -t priv -x -o found.txt`
 
 ### Advanced
 
