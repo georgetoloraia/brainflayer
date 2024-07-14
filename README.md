@@ -68,7 +68,7 @@ or
 `rand66bit | brainflayer -v -b example.blf -t priv -x -o found.txt`
 
 
-```less
+```c
 if startswith: 2 
 rand2 | brainflayer -v -b example.blf -t priv -x -o found.txt
 if startswith: 3
